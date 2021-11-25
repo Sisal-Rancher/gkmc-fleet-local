@@ -1,3 +1,4 @@
+namespace: cert-manager
 helm:
   # A custom release name to deploy the chart as. If not specified a release name
   # will be generated.
