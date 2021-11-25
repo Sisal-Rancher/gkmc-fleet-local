@@ -23,6 +23,10 @@ helm:
   # install.
   values:
     installCRDs: true
+    prometheus:
+      enabled: true
+      servicemonitor:
+        enabled: true
 
   # Override immutable resources. This could be dangerous.
   force: false
