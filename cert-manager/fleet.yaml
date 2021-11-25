@@ -1,7 +1,5 @@
-dependsOn:
-  - cert-manager-crds: gkmc-fleet-local-cert-manager-crds
+defaultNamespace: cert-manager
 
-namespace: cert-manager
 helm:
   # A custom release name to deploy the chart as. If not specified a release name
   # will be generated.
@@ -21,6 +19,10 @@ helm:
   # The version of the chart or semver constraint of the chart to find. If a constraint
   # is specified it is evaluated each time git changes.
   version: 1.6.1
-    
+  # Any values that should be placed in the `values.yaml` and passed to helm during
+  # install.
+  values:
+    installCRDs: true
+
   # Override immutable resources. This could be dangerous.
   force: false
